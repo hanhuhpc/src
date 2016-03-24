@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingTop="5dip" >
+//最外层视图方向使用垂直方向，每行之间使用水平方向，按钮使用Button来填充。第一行是显示框
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical|right"
+        android:textColor="#ff0000"
+        android:textSize="30sp" >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dip" >
+
+        <Button
+            android:id="@+id/Button07"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/Button08"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/Button09"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/ButtonJia"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dip" >
+
+        <Button
+            android:id="@+id/Button04"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/Button05"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/Button06"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/ButtonJian"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dip" >
+
+        <Button
+            android:id="@+id/Button01"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/Button02"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/Button03"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/ButtonCheng"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dip" >
+
+        <Button
+            android:id="@+id/Button00"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/ButtonC"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="c"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/ButtonDengyu"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/ButtonChu"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="25sp" />
+    </LinearLayout>
+  ss
+</LinearLayout> 
