@@ -7,50 +7,50 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 
-public class MainActivity extends Activity {//¼ÆËãÆ÷ ÓĞ Êı×ÖÔ¤Ëã·ûºÅ Êı×Ö ¿Õ¼ÓÊı×Ö Êı×Ö¼Ó¿Õ ¿Õ¼Ó¿Õ ±»³ıÊı ²»ÄÜËÀ0
+public class MainActivity extends Activity {//è®¡ç®—å™¨ æœ‰ æ•°å­—é¢„ç®—ç¬¦å· æ•°å­— ç©ºåŠ æ•°å­— æ•°å­—åŠ ç©º ç©ºåŠ ç©º è¢«é™¤æ•° ä¸èƒ½é™¤ä»¥0
 	TextView tv;
-	int[] buttons; // Êı×Ö°´Å¥Êı×é
+	int[] buttons; // æ•°å­—æŒ‰é’®æ•°ç»„
 	int result;
 	int result0;
 	int result1;
 
-	Button buttonC; // °´Å¥¶ÔÏóÉùÃ÷
+	Button buttonC; // æŒ‰é’®å¯¹è±¡å£°æ˜
 	Button buttonJia;
 	Button buttonJian;
 	Button buttonCheng;
 	Button buttonChu;
 	Button buttonDengyu;
 
-	String str1; // ¾ÉÊäÈëµÄÖµ
-	String str2; // ĞÂÊäÈëµÄÖµ
+	String str1; // æ—§è¾“å…¥çš„å€¼
+	String str2; // æ–°è¾“å…¥çš„å€¼
 
-	int flag = 0; // ¼ÆËã±êÖ¾Î»,0µÚÒ»´ÎÊäÈë£»1¼Ó£»2¼õ£»3³Ë£»4³ı£»5µÈÓÚ
+	int flag = 0; // è®¡ç®—æ ‡å¿—ä½,0ç¬¬ä¸€æ¬¡è¾“å…¥ï¼›1åŠ ï¼›2å‡ï¼›3ä¹˜ï¼›4é™¤ï¼›5ç­‰äº
 	Button temp;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main); // Ìø×ªµ½main½çÃæ
+		setContentView(R.layout.activity_main); // è·³è½¬åˆ°mainç•Œé¢
 		initButton();
 
-		// Çå¿Õ°´Å¥µÄµã»÷ÊÂ¼ş¼àÌıÆ÷
+		// æ¸…ç©ºæŒ‰é’®çš„ç‚¹å‡»äº‹ä»¶ç›‘å¬å™¨
 		buttonC.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				str1 = "";
-				str2 = ""; // Çå¿Õ¼ÇÂ¼
+				str2 = ""; // æ¸…ç©ºè®°å½•
 				tv.setText(str1);
 				flag = 0;
 			}
 		});
-		// ¼àÌı
+		// ç›‘å¬
 		for (int i = 0; i < buttons.length; i++) {
 			temp = (Button) findViewById(buttons[i]);
-			temp.setOnClickListener( // ÎªButtonÌí¼Ó¼àÌıÆ÷
+			temp.setOnClickListener( // ä¸ºButtonæ·»åŠ ç›‘å¬å™¨
 			new OnClickListener() {
 				@Override
 				public void onClick(View v) {
 					str1 = tv.getText().toString().trim();
-					str1 = str1 + String.valueOf(((Button) v).getText());// »ñµÃĞÂÊäÈëµÄÖµ
+					str1 = str1 + String.valueOf(((Button) v).getText());// è·å¾—æ–°è¾“å…¥çš„å€¼
 					System.out.println("str1" + ":::" + str1);
 					tv.setText(str1);
 				}
@@ -84,26 +84,26 @@ public class MainActivity extends Activity {//¼ÆËãÆ÷ ÓĞ Êı×ÖÔ¤Ëã·ûºÅ Êı×Ö ¿Õ¼ÓÊı
 		});
 	}
 
-	// ³õÊ¼»¯°´Å¥
-	public void initButton() { // ³õÊ¼»¯¿Ø¼ş×ÊÔ´
-		tv = (TextView) this.findViewById(R.id.tv); // »ñÈ¡ÎÄ±¾¿ò¿Ø¼ş¶ÔÏó
+	// åˆå§‹åŒ–æŒ‰é’®
+	public void initButton() { // åˆå§‹åŒ–æ§ä»¶èµ„æº
+		tv = (TextView) this.findViewById(R.id.tv); // è·å–æ–‡æœ¬æ¡†æ§ä»¶å¯¹è±¡
 		str1 = String.valueOf(tv.getText());
-		str2 = ""; // ³õÊ¼»¯ÔËËãÊäÈëÊıÖµ
+		str2 = ""; // åˆå§‹åŒ–è¿ç®—è¾“å…¥æ•°å€¼
 
-		buttonC = (Button) this.findViewById(R.id.ButtonC); // »ñµÃ¼ÆËã°´Å¥µÄ°´Å¥¶ÔÏó
+		buttonC = (Button) this.findViewById(R.id.ButtonC); // è·å¾—è®¡ç®—æŒ‰é’®çš„æŒ‰é’®å¯¹è±¡
 		buttonJia = (Button) this.findViewById(R.id.ButtonJia);
 		buttonJian = (Button) this.findViewById(R.id.ButtonJian);
 		buttonCheng = (Button) this.findViewById(R.id.ButtonCheng);
 		buttonChu = (Button) this.findViewById(R.id.ButtonChu);
 		buttonDengyu = (Button) this.findViewById(R.id.ButtonDengyu);
 
-		buttons = new int[] { // ¼ÇÂ¼ÊıÖµ°´Å¥µÄid
+		buttons = new int[] { // è®°å½•æ•°å€¼æŒ‰é’®çš„id
 		R.id.Button00, R.id.Button01, R.id.Button02, R.id.Button03,
 				R.id.Button04, R.id.Button05, R.id.Button06, R.id.Button07,
 				R.id.Button08, R.id.Button09 };
 	}
 
-	// °´Å¥¼àÌı
+	// æŒ‰é’®ç›‘å¬
 	public void buttonListener(Button button, final int id) {
 		button.setOnClickListener(new OnClickListener() {
 			@Override
